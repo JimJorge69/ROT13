@@ -62,6 +62,7 @@ namespace ROT13
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(349, 20);
             this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form1
             // 

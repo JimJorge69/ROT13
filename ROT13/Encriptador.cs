@@ -9,22 +9,109 @@ namespace ROT13
     class Encriptador
     {
         private LinkedList<Token> Salida;
-        private int a = 1, b = 2, c = 3, d = 4, e = 5, f = 6, g = 7, h = 8, i = 9, j = 10, k = 11, l = 12, m = 13, n = 14, ñ = 15, o = 16, p = 17, q = 18, r = 19, s = 20, t = 21, u = 22, v = 23, w = 24, x = 25, y = 26, z = 27;
-
+        private char[] abecedario = {'a', 'b','c','d','e','f','g','h','i','j','k','l','m','n','ñ','o','p','q','r','s','t','u','v','w','x','y','z'};
         public LinkedList<Token> escanear(String entrada)
         {
             Char caracter;
             //Se inicia un siclo para la verificacion de la operacion sea correcta
-            for (int si = 0; si < entrada.Length; si++)
+            char[] encriptar = new char[entrada.Length];
+
+            for (int ii = 0; ii < entrada.Length; ii++)
             {
-                caracter = entrada.ElementAt(si);
+                caracter = entrada.ElementAt(ii);
 
-                if (caracter=='a')
+                switch (caracter)
                 {
-
+                    case 'a':
+                        encriptar[ii] = 'n';
+                        break;
+                    case 'b':
+                        encriptar[ii] = 'o';
+                        break;
+                    case 'c':
+                        encriptar[ii] = 'p';
+                        break;
+                    case 'd':
+                        encriptar[ii] = 'q';
+                        break;
+                    case 'e':
+                        encriptar[ii] = 'r';
+                        break;
+                    case 'f':
+                        encriptar[ii] = 's';
+                        break;
+                    case 'g':
+                        encriptar[ii] = 't';
+                        break;
+                    case 'h':
+                        encriptar[ii] = 'u';
+                        break;
+                    case 'i':
+                        encriptar[ii] = 'v';
+                        break;
+                    case 'j':
+                        encriptar[ii] = 'w';
+                        break;
+                    case 'k':
+                        encriptar[ii] = 'x';
+                        break;
+                    case 'l':
+                        encriptar[ii] = 'y';
+                        break;
+                    case 'm':
+                        encriptar[ii] = 'z';
+                        break;
+                    case 'n':
+                        encriptar[ii] = 'a';
+                        break;
+                    case 'o':
+                        encriptar[ii] = 'b';
+                        break;
+                    case 'p':
+                        encriptar[ii] = 'c';
+                        break;
+                    case 'q':
+                        encriptar[ii] = 'd';
+                        break;
+                    case 'r':
+                        encriptar[ii] = 'e';
+                        break;
+                    case 's':
+                        encriptar[ii] = 'f';
+                        break;
+                    case 't':
+                        encriptar[ii] = 'g';
+                        break;
+                    case 'u':
+                        encriptar[ii] = 'h';
+                        break;
+                    case 'v':
+                        encriptar[ii] = 'i';
+                        break;
+                    case 'w':
+                        encriptar[ii] = 'j';
+                        break;
+                    case 'x':
+                        encriptar[ii] = 'k';
+                        break;
+                    case 'y':
+                        encriptar[ii] = 'l';
+                        break;
+                    case 'z':
+                        encriptar[ii] = 'm';
+                        break;
+                    default:
+                        // ningun valor recibido
+                        break;
                 }
 
             }
+
+            for (int i=0;i<entrada.Length;i++)
+            {
+                Console.Write(encriptar[i]);
+            }
+            Console.WriteLine();
                 return Salida;
         }
     }
