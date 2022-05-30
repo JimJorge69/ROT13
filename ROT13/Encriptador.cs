@@ -207,7 +207,7 @@ namespace ROT13
                         break;
                 }
             }
-
+            Console.WriteLine("Encripta");
             for (int ii = 0; ii < entrada.Length; ii++)
             {
                 Console.WriteLine(encripto[ii]);
@@ -253,7 +253,7 @@ namespace ROT13
                 contador += 1;
             }
             //Imprimo resultados encriptados
-            Console.WriteLine();
+            Console.WriteLine("Valores encriptados");
             for (int ii = 0; ii < entrada.Length; ii++)
             {
                 Console.WriteLine(encriptado[ii]);
@@ -292,7 +292,7 @@ namespace ROT13
                 contador += 1;
             }
             //Imprimo resultados Desencriptados
-            Console.WriteLine();
+            Console.WriteLine("Valores desencriptados");
             for (int ii = 0; ii < entrada.Length; ii++)
             {
                 Console.WriteLine(encripto[ii]);
@@ -392,11 +392,13 @@ namespace ROT13
                 }
             }
             //Valores desencriptados
-            Console.WriteLine();
-            for (int ii = 0; i<palabra.Length;ii++)
+            Console.WriteLine("Valores regresados a la normalidad");
+            for (int ii = 0; ii < encripto.Length; ii++)
             {
                 Console.WriteLine(palabra[ii]);
             }
+            Console.WriteLine();
+
             return Salida;
         }
     }
