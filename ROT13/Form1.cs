@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ROT13
 {
-    public partial class Form1 : Form
+    public partial class ROT13 : Form
     {
         private int a = 1, b = 2, c = 3, d = 4, e = 5, f = 6, g = 7, h = 8, i = 9, j = 10, k = 11, l = 12, m = 13, n = 14, o = 15, p = 16, q = 17, r = 18, s = 19, t = 20, u = 21, v = 22, w = 23, x = 24, y = 25, z = 26;
 
@@ -24,7 +24,7 @@ namespace ROT13
 
         }
 
-        public Form1()
+        public ROT13()
         {
             InitializeComponent();
             buttonIniciar.BackColor = Color.Green;//Se coloca en color rojo el boton iniciar
@@ -223,7 +223,7 @@ namespace ROT13
                         encripto[ii] = z;
                         break;
                     default:
-                        encripto[ii] = 0;
+                        encripto[ii] = ' ';
                         break;
                 }
             }
@@ -413,7 +413,7 @@ namespace ROT13
                         palabra[ii] = 'z';
                         break;
                     default:
-                        palabra[ii] = '0';
+                        palabra[ii] = ' ';
                         break;
                 }
             }
